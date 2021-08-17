@@ -1,11 +1,11 @@
 import React from 'react'
-import Logos from '../Assets/Logo.jpg';
+import Cafe from '../Assets/Cafe.jpg';
 import "../styles/Contact.css";
 function Contact() {
     return (
-        <div className="contact">
-            <div className="leftside"style={{backgroundImage: `url(${Logos})`}}></div>
-            <div className="rightside">
+        <div >
+            {/* <div className="leftside"style={{backgroundImage: `url(${Logos})`}}></div> */}
+            <div className="rightside" style={{backgroundImage: `url(${Cafe})`}}>
                 <h1>Contact Us</h1>
 
                 <form id="contact-form" method="POST">
