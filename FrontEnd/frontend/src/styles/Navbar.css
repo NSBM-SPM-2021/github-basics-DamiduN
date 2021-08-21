@@ -1,10 +1,12 @@
-.Navbar {
+/* .Navbar {
     width: 100%;
     height: 100px;
     background-color: #121619;
     display: flex;
     flex-direction: row;
   }
+
+
   
   .Navbar .rightSide {
     flex: 50%;
@@ -99,4 +101,30 @@
     .hiddenLinks {
       display: none;
     }
+  } */
+
+
+
+  .navbar {
+    padding: 20px;
+    display: flex;
+    align-items: inherit;
+    margin: 0 auto;
+    border-bottom: 1px solid #050505;
+    background-color: #050505;
+  }
+   .navbar h1 {
+    color: rgb(252, 250, 246);
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+  } 
+  .navbar .links {
+    margin-left: auto;
+  }
+  .navbar a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+    color: rgb(255, 255, 254);
+    
   }
