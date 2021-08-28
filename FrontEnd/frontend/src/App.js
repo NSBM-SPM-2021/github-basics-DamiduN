@@ -20,10 +20,10 @@ function App() {
       <Route path ="/menu"exact component={Menu} />
       <Route path ="/about"exact component={About} />
       <Route path ="/contact"exact component={Contact} />
-      <Route path ="/foodorder"exact component={FoodOrder} />
+      {/* <Route path ="/foodorder/:price"exact component={FoodOrder} /> */}
 
 
-      <Route path="FoodOrder/:price">
+      <Route path="/foodorder/:price/:name">
 
 
 

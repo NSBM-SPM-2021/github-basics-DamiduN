@@ -4,15 +4,14 @@ import {Link} from 'react-router-dom';
 function MenuItem({image,name,price}) {
     return (
         <div  className="menuItem">
-       <Link to ='/foodorder'>
+       <Link to ={`/foodorder/${price}/${name}`}>
  <div style={{backgroundImage: `url(${image})`}}>             
          </div>
         </Link>
-                    <div>
                     
              <h1>{name}</h1>
              <p>Rs{price}</p>
-                    </div>
+                    
 
         </div>
  
@@ -20,4 +19,4 @@ function MenuItem({image,name,price}) {
     )
 }
 
-export default MenuItem
+export default MenuItem;
