@@ -21,6 +21,17 @@ function App() {
       <Route path ="/about"exact component={About} />
       <Route path ="/contact"exact component={Contact} />
       <Route path ="/foodorder"exact component={FoodOrder} />
+
+
+      <Route path="FoodOrder/:price">
+
+
+
+        <FoodOrder/>
+
+      </Route>
+
+
       
       
     </switch>
