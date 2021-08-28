@@ -1,14 +1,29 @@
-import React from 'react'
+import React from "react";
+import Order from "../Assets/Ordering.jpg";
+import "../styles/Order.css";
 import {Link} from 'react-router-dom';
-import order from '../Assets/new.jpg';
+import { useHistory, useParams } from "react-router-dom";
 
 function FoodOrder() {
-    return (
-        <div >
-        <div className="rightside" style={{backgroundImage: `url(${order})`}}>
-            <h1>Order Page</h1>
+  return (
+      
+    <div className="foodorder">
+      <div
+        className="leftSide"
+        style={{ backgroundImage: `url(${Order})` }}
+      ></div>
+      <div className="rightSide">
+        <h1>Order Your Favourite Food Choice!</h1>
+        
+            <div className="scroll-div">
+                <div className="scroll-object">
 
-            <form id="order form" method="POST">
+                
+
+            
+
+        <form id="order form" method="POST" >
+            
                 <label htmlFor="name">Full Name</label> <br/>
                 <input name="name" placeholder="Enter the Full Name..." type="text"/>
                 <label htmlFor="address">Address</label> <br/>
@@ -16,8 +31,9 @@ function FoodOrder() {
                 <label htmlFor="mobileno">Mobile No</label><br/>
                 <input name="mobileno" placeholder="Enter the Mobile No..." type="text"/>
                 <label htmlFor="quantity">Quantity</label><br/>
-                <input name="quantity" placeholder="Enter the Quantity..." type="text"/>  
+                <input name="quantity" placeholder="Enter the Quantity..." type="number"/>  
                 <label htmlFor="payment">Payment Method</label>
+                <label htmlFor="Food Category">Food Item</label>
                 <div >
                     <table>
                         <tr>
@@ -31,6 +47,7 @@ function FoodOrder() {
    </div>
   
                 <div >
+                <label htmlFor="TorD">Select your Choice</label>
                     <table>
                         <tr>
                             <td>Take Away</td>
@@ -46,11 +63,13 @@ function FoodOrder() {
    
                 
    </div>
-
             </form>
-        </div>
-        
-    </div>
-)
-    }
+            </div>
+            </div>
+            </div>
+      </div>
+    
+  );
+}
+
 export default FoodOrder;
