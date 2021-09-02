@@ -1,7 +1,7 @@
 import React from 'react'
 import Abouttop from '../Assets/Abouttop.jpg';
 import bottom from '../Assets/bottom.jpg';
-
+import '../styles/About.css'; 
 
 function About() {
     return (
