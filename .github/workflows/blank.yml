@@ -6,11 +6,9 @@ on:
       - main
 
 jobs:
- 
-  USER:
- 
-   runs-on: ubuntu-latest
-   steps:
+  BACKEND:
+    runs-on: ubuntu-latest
+    steps:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:  
@@ -19,3 +17,16 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "backend-savory" #Must be unique in Heroku
           heroku_email: "damindu.nehan@gmail.com"
+  USER:
+   needs: BACKEND
+   runs-on: ubuntu-latest
+   steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:  
+          branch: main
+          appdir: ./FrontEnd/frontend
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "frontend-savory" #Must be unique in Heroku
+          heroku_email: "damindu.nehan@gmail.com"
+ 
