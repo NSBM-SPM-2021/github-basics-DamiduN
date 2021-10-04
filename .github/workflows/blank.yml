@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+ 
+  USER:
+
+   runs-on: ubuntu-latest
+   steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:  
+          branch: main
+          appdir: ./front_end/frontend
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: "savory-frontend" #Must be unique in Heroku
+          heroku_email: "damindu.nehan@gmail.com"
